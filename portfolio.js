@@ -2,6 +2,8 @@ var openDiv = document.querySelector(".open-div");
 var ul = document.querySelectorAll(".ulChildern li a");
 setTimeout(() => {
   openDiv.style.display = "none";
+  // scrollBar.display='block';
+  document.body.style.overflow="auto";
 }, 8500);
 
 // var nav = document.getElementById("nav");

@@ -8,6 +8,20 @@
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    /* display: none; */
+    width: 5px;
+}
+body{
+    overflow: hidden;
+}
+::-webkit-scrollbar-thumb{
+background-color: rgb(37, 31, 73);
+border-radius: 15px;
+}
+::-webkit-scrollbar-track{
+background-color: palevioletred;
+}
 .main{
     width: 100%;
     height: 100vh;
@@ -21,7 +35,8 @@ html{
     /* background-color: rgb(53, 191, 191); */
     display: flex;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1050 !important;
+    top: 0;
     
 }
 .left-side{
@@ -50,8 +65,8 @@ html{
     flex-direction: column;
 }
 .images{
-    width: 20%;
-    height: 300px;
+    width: 30lvw;
+    height: 45vh;
     position: relative;
 }
 .images .skell-img{
@@ -59,7 +74,7 @@ html{
     height: 100%;
     position: absolute;
     animation: moveDown 5s;
-    transform: translateY(300px);
+    transform: translateY(400px);
 }
 .images .shirt{
     width: 17%;
@@ -79,7 +94,7 @@ html{
     height: 40%;
     position: absolute;
     left: 30%;
-    transform: translateY(-900px);
+    transform: translateY(-1300px);
     animation: moveUp 3.5s;
     animation-delay: 1s;
 }
@@ -152,7 +167,7 @@ animation: move 4s;
 }
 @keyframes moveUp {
     0%{
-        transform: translateY(-900px);
+        transform: translateY(-1300px);
     }
     25%{
         transform: translateY(-60px);
@@ -164,7 +179,7 @@ animation: move 4s;
         transform: translateY(-60px);
     }
     100%{
-        transform: translateY(-900px);
+        transform: translateY(-1300px);
     }
 }
 
@@ -173,13 +188,13 @@ animation: move 4s;
         transform: translateX(-900px);
     }
     25%{
-        transform: translateX(135px);
+        transform: translateX(260%);
     }
     50%{
-        transform: translateX(135px);
+        transform: translateX(260%);
     }
     75%{
-        transform: translateX(135px);
+        transform: translateX(260%);
     }
     100%{
         transform: translateX(-900px);
@@ -284,6 +299,9 @@ font-size: 25px;
 font-weight: bold;
 color: #5a3977;
 
+}
+nav.fixed-top {
+    z-index: 2; /* Set a lower z-index to ensure .open-div is on top */
 }
 nav ul{
     list-style-type: none;
